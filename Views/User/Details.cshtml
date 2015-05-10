@@ -1,0 +1,26 @@
+﻿@model Tema2_MiniMagazin.Models.Produse
+
+
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Produse</legend>
+
+    <div class="display-label">NumeProdus</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumeProdus)
+    </div>
+
+    <div class="display-label">Pret</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pret)
+    </div>
+    
+   
+    <input type="button" title="Buy" value="Add to Cart" onclick="location.href='@Url.Action("AddToCart", "ShoppingCart",  new { id = Model.ID},"" )'" />
+     
+</fieldset>
+<p>
+      @Html.ActionLink("Back to List", "Index")
+</p>

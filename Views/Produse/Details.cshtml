@@ -1,0 +1,25 @@
+﻿@model Tema2_MiniMagazin.Models.Produse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Produse</legend>
+
+    <div class="display-label">NumeProdus</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumeProdus)
+    </div>
+
+    <div class="display-label">Pret</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pret)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

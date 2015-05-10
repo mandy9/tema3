@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Export";
+}
+
+<h2>Export Products</h2>
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+
+@* By default BeginForm use FormMethod.Post *@
+
+@using (Html.BeginForm("ButonExport", "Home"))
+{  
+    <fieldset>
+
+    <legend>Export File Types</legend>
+
+<div>
+     <h2>
+
+    </h2>
+</div>
+
+ @Html.Label("Please Enter your type CSV or JSON:")
+<input id="Text1" type="text" name="txtTYPE"/>
+<h2>   
+
+</h2>
+<input id="Button1" type="submit" value="Export" />
+    
+
+      </fieldset>
+
+    
+}
+
+<img src="/Content/Images/t.jpg"/>
+
+    <div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

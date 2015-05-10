@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Tema2_MiniMagazin.Models.Produse>
+
+@{
+    ViewBag.Title = "Products Available";
+}
+
+<h2>Products Available at the Little Cake Shop</h2>
+
+
+<table>
+    <tr>
+        <th>
+            NumeProdus
+        </th>
+        <th>
+            Pret (lei)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeProdus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pret)
+        </td>
+        <td>
+          
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) 
+          
+                              
+    
+       </td> 
+    </tr>
+}
+
+</table>
+
+<h2>
+
+</h2>
+
+
+<td>
+@Html.ActionLink("Back to Home", "Index","Home")
+</td>
